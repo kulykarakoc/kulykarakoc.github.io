@@ -1,22 +1,20 @@
 .wrapper {        
-    grid-template-columns: 45% 10% 45%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
-        'header header header'
-        'landing landing landing'
-        'bio bio bio'
-        'photo2 photo2 github'
-        'projects projects projects'
-        'contact contact contact'
-        'footer  footer  footer';
+        'header header'
+        'landing landing'
+        'youtube bio'
+        'contact contact'
+        'footer  footer';
 }
 
 .header {
-    grid-area: 1 / 1 / span 1 / span 3;
-    right: 0px;
+    grid-area: 1 / 1 / span 1 / span 2;
+    right: 0;
 }
 
 .landing {
-    grid-area: 2 / 1 / span 1 / span 3;
+    grid-area: 2 / 1 / span 1 / span 2;
     margin: 10px;
     align-items:flex-end;
     padding:40px;
@@ -26,40 +24,29 @@
 
 .landing-content {
     width:350px;
-    flex-grow:1;
     justify-content:last baseline; 
     padding:40px;
 }
 
 .landing-photo {
     width:400px;
-    flex-grow:1;
     padding:40px;
 }
 
+.youtube {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+
 .bio {
-    grid-area: 3 / 1 / span 1 / span 3;
-}
-.photo2 {
-    grid-area: 4 / 1 / span 1 / span 2;
-    padding: 40px;
-}
-
-.github {
-    grid-area: 4 / 3 / span 1 / span 1;
-    padding: 40px;
-    margin: 10px;
-}
-
-.projects {
-    grid-area: 5 / 1 / span 1 / span 3;
+    grid-area: 3 / 2 / span 2 / span 1;
 }
 
 .contact {
-    grid-area: 6 / 1 / span 1 / span 3;
+    grid-area: 4 / 1 / span 2 / span 2;
+    padding: 40px;
 }
 
 .footer {
-    grid-area: 7 / 1 / span 1 / span 3;
+    grid-area: 5 / 1 / span 2 / span 2;
     padding: 40px;
 }
