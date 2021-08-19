@@ -36,11 +36,12 @@
 }
 
 .youtube {
-    grid-area: 3 / 1 / span 1 / span 1;
+    grid-area: 3 / 1 / span 2 / span 1;
+    flex-grow:1
 }
 
 .bio {
-    grid-area: 3 / 2 / span 2 / span 2;
+    grid-area: 3 / 2 / span 2 / span 1;
     flex-grow:1;
 }
 
