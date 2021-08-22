@@ -1,20 +1,25 @@
 .wrapper {        
-    grid-template-columns: 60% 40%;
+    grid-template-columns: auto auto auto;
     grid-template-areas:
         'header header'
         'landing landing'
-        'youtube bio'
-        'contact contact'
-        'footer  footer';
+        'bio bio bio'
+        'projects projects'
+        'projects projects'
+        'projects projects'
+        'projects projects'
+        'contact contact contact'
+        'footer footer footer';
+    justify-self: center;
 }
 
 .header {
-    grid-area: 1 / 1 / span 1 / span 2;
+    grid-area: header;
     right: 0;
 }
 
 .landing {
-    grid-area: 2 / 1 / span 1 / span 2;
+    grid-area: landing;
     margin: 10px;
     align-items:flex-end;
     padding:40px;
@@ -35,22 +40,88 @@
     padding:40px;
 }
 
-.youtube {
-    grid-area: 3 / 1 / span 2 / span 1;
-    flex-grow:1
-}
-
 .bio {
-    grid-area: 3 / 2 / span 2 / span 1;
+    grid-area: bio;
+    margin: 10px;
+    align-items:flex-end;
+    padding:40px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.bio-youtube {
+    width:350px;
     flex-grow:1;
+    justify-content:last baseline; 
+    padding:40px;
 }
 
+.bio-about {
+    width:400px;
+    flex-grow:1;
+    padding:40px;
+}
+
+.projects {
+    grid-area: projects;
+    margin: 10px;
+    align-items:flex-end;
+    padding:40px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.projects-one {
+    grid-area: projects;
+    width:200px;
+    flex-grow:1;
+    padding:40px;
+}
+
+.projects-two {
+    grid-area: projects;
+    width:200px;
+    flex-grow:1;
+    padding:40px;
+}
+
+.projects-three {
+    grid-area: projects;
+    width:200px;
+    flex-grow:1;
+    padding:40px;
+}
 .contact {
-    grid-area: 4 / 1 / span 2 / span 2;
-    padding: 40px;
+    grid-area: contact;
+    margin: 10px;
+    align-items:flex-end;
+    padding:40px;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 .footer {
-    grid-area: 5 / 1 / span 2 / span 2;
-    padding: 40px;
+    grid-area: footer;
+    left: 0;
 }
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container {
+    text-align: center;
+    display: block;
+  }
